@@ -22,5 +22,7 @@ public class Main {
         barcelona.adicionarPremiacao(premiacao1);
         barcelona.adicionarPremiacao(premiacao2);
 
+        System.out.print(premiacao2);
+        System.out.print("\n");
     }
 }

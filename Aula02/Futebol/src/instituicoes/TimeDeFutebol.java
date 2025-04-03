@@ -1,6 +1,8 @@
 package instituicoes;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 import campeonato.Premiacao;
 import rh.Jogador;
@@ -10,49 +12,50 @@ public class TimeDeFutebol {
     private String nome;
     private LocalDateTime dataCriacao;
     private Jogador jogadores[];
-    private Premiacao premiacao[];
+    private List<Premiacao> premiacoes;
 
-    public TimeDeFutebol (String nome) {
-
+    public TimeDeFutebol(String nome) {
         this.nome = nome;
         this.dataCriacao = LocalDateTime.now();
-        this.jogadores = new Jogador[100];
-        this.premiacao = new Premiacao[50];
+        this.jogadores = new Jogador[100]; 
+        this.premiacoes = new ArrayList<>(); 
     }
 
-    public String getnome() {
-
+    public String getNome() {
         return this.nome;
-
     }
 
-    public LocalDateTime getDateTime9() {
-
+    public LocalDateTime getDataCriacao() {
         return this.dataCriacao;
-
     }
 
     public void adicionarJogador(Jogador jogador) {
-
-        this.jogadores[jogador.getNumeroDaCamisa()] = jogador;
-
+        int numero = jogador.getNumeroDaCamisa();
+        if (numero >= 0 && numero < jogadores.length) {
+            this.jogadores[numero] = jogador;
+        } else {
+            System.out.println("Número da camisa inválido: " + numero);
+        }
     }
 
     public void adicionarPremiacao(Premiacao premiacao) {
-
-        this.premiacao[premiacao.getAno()] = premiacao;
-
+        this.premiacoes.add(premiacao); 
     }
 
     public Jogador[] getJogadores() {
-
         return this.jogadores;
-
     }
 
     public Jogador getJogadorPorCamisa(int numeroDaCamisa) {
+        if (numeroDaCamisa >= 0 && numeroDaCamisa < jogadores.length) {
+            return this.jogadores[numeroDaCamisa];
+        } else {
+            System.out.println("Camisa inválida: " + numeroDaCamisa);
+            return null;
+        }
+    }
 
-        return this.jogadores[numeroDaCamisa];
-
+    public List<Premiacao> getPremiacoes() {
+        return this.premiacoes;
     }
 }
