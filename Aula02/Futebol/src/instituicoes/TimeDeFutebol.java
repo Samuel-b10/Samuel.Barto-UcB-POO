@@ -1,6 +1,8 @@
 package instituicoes;
 
 import java.time.LocalDateTime;
+
+import campeonato.Premiacao;
 import rh.Jogador;
 
 public class TimeDeFutebol {
@@ -8,13 +10,14 @@ public class TimeDeFutebol {
     private String nome;
     private LocalDateTime dataCriacao;
     private Jogador jogadores[];
+    private Premiacao premiacao[];
 
     public TimeDeFutebol (String nome) {
 
         this.nome = nome;
         this.dataCriacao = LocalDateTime.now();
         this.jogadores = new Jogador[100];
-
+        this.premiacao = new Premiacao[50];
     }
 
     public String getnome() {
@@ -32,6 +35,12 @@ public class TimeDeFutebol {
     public void adicionarJogador(Jogador jogador) {
 
         this.jogadores[jogador.getNumeroDaCamisa()] = jogador;
+
+    }
+
+    public void adicionarPremiacao(Premiacao premiacao) {
+
+        this.premiacao[premiacao.getAno()] = premiacao;
 
     }
 

@@ -1,3 +1,4 @@
+import campeonato.Premiacao;
 import instituicoes.TimeDeFutebol;
 import rh.Jogador;
 
@@ -14,5 +15,12 @@ public class Main {
         barcelona.adicionarJogador(jogador1);
         barcelona.adicionarJogador(jogador2);
         barcelona.adicionarJogador(jogador3);
+
+        Premiacao premiacao1 = new Premiacao("Liga dos Campeões da UEFA", 2015);
+        Premiacao premiacao2 = new Premiacao("La Liga", 2015);
+
+        barcelona.adicionarPremiacao(premiacao1);
+        barcelona.adicionarPremiacao(premiacao2);
+
     }
 }
