@@ -20,8 +20,8 @@ public class Jogador extends Personagem{
     }
 
     public void mostrarInformacoes() {
-        System.out.println("\n──────────────────────────────────────");
-        System.out.println("           Seus Status: \n");
+        System.out.println("──────────────────────────────────────");
+        System.out.println("            Status: \n");
         System.out.println("            Nome: " + nome);
         System.out.println("            Vida: " + vida);
         System.out.println("            Dano: " + dano);

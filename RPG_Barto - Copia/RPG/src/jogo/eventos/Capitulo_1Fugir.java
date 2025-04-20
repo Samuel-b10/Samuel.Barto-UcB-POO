@@ -16,7 +16,7 @@ public class Capitulo_1Fugir {
                     Você se aproxima com cautela... e ali está: um antigo colar, envolto por uma leve energia pulsante.
 
                     [Relíquia Encontrada: Colar da Fúria]
-                    Seu dano aumentou em +4!
+                    Seu dano aumentou em +3!
 
                     Mesmo após a fuga, talvez essa descoberta mude o rumo da sua jornada.
 
