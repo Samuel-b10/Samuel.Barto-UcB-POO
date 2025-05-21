@@ -1,4 +1,4 @@
-package fomas.formaspoli;
+package formas.formaspoli;
 
 public class Quadrado extends Forma{
 

@@ -1,10 +1,10 @@
-package fomas.formaspoli;
+package formas.formaspoli;
 
-public  class Triagulo extends Forma{
+public  class Triangulo extends Forma{
 
     float x, y, z;
 
-    public Triagulo(float x, float y, float z) {
+    public Triangulo(float x, float y, float z) {
         this.x = x;
         this.y = y;
         this.z = z;
